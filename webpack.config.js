@@ -51,7 +51,10 @@ module.exports = {
     })
   ],
   devServer: {
+    contentBase: resolve(__dirname,'dist'),
+    host: '192.168.118.162',
     port: 8100,
-    historyApiFallback: true
+    historyApiFallback: true,
+    compress: true
   }
 }
