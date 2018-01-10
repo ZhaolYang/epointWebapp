@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="index">
     我是首页
   </div>
 </template>

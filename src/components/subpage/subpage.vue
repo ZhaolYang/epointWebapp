@@ -1,5 +1,5 @@
 <template>
-  <div class="detail">
+  <div class="subpage">
     我是二级页
   </div>
 </template>
