@@ -2,17 +2,28 @@ const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/main.js',
   output: {
     path: resolve(__dirname, 'dist'),
-    filename: 'index.js'
+    filename: 'main.js'
+  },
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: {
+      'vue$': 'vue/dist/vue.common.js'
+    }
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
       },
       {
         test: /\.html$/,
@@ -52,7 +63,7 @@ module.exports = {
   ],
   devServer: {
     contentBase: resolve(__dirname,'dist'),
-    host: '192.168.118.162',
+    host: 'localhost',
     port: 8100,
     historyApiFallback: true,
     compress: true
