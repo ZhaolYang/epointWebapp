@@ -5,6 +5,8 @@ import index from './components/index/index';
 import subpage from './components/subpage/subpage';
 import detail from './components/detail/detail';
 
+import 'common/common';
+
 Vue.use(VueRouter);
 
 const routes = [

@@ -4,7 +4,7 @@
   "description": "三级门户网站",
   "main": "index.js",
   "scripts": {
-    "server": "webpack-dev-server",
+    "server": "webpack-dev-server --open",
     "build": "webpack -p"
   },
   "repository": {

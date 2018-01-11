@@ -8,9 +8,10 @@ module.exports = {
     filename: 'main.js'
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json','.scss'],
     alias: {
-      'vue$': 'vue/dist/vue.common.js'
+      'vue$': 'vue/dist/vue.common.js',
+      'common': resolve(__dirname, 'src/common')
     }
   },
   module: {
@@ -32,6 +33,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader','css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader','css-loader','sass-loader']
       },
       {
         test: /\.vue$/,
