@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App';
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import index from './components/index/index';
 import subpage from './components/subpage/subpage';
 import detail from './components/detail/detail';
@@ -8,6 +10,7 @@ import detail from './components/detail/detail';
 import 'common/common';
 
 Vue.use(VueRouter);
+Vue.use(ElementUI);
 
 const routes = [
   {

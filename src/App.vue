@@ -1,16 +1,17 @@
 <template>
-  <div>
-    <ul class="tab border-1px">
-      <li class="tab-item">
-        <router-link to="/index">首页</router-link>
-      </li>
-      <li class="tab-item">
-        <router-link to="/subpage">二级页</router-link>
-      </li>
-      <li class="tab-item">
-        <router-link to="/detail">详情页</router-link>
-      </li>
-    </ul>
-    <keep-alive><router-view></router-view></keep-alive>
+  <div class="app">
+    <el-container>
+      <el-header>Header</el-header>
+      <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-main>Main</el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
+
+<style lang="scss" scoped>
+  .app {
+    color: #f67300;
+  }
+</style>
