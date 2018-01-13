@@ -3,14 +3,43 @@
     <div class="header">组件库</div>
     <div class="main">
       <div class="sidebar">
-        <div class="sidebar-inner">我是边栏</div>
+        <div class="sidebar-inner">
+          <!-- <router-link to="/type1">Go to type1</router-link>
+          <router-link to="/type2">Go to type2</router-link> -->
+          <ul>
+            <li v-for="item in types">
+              <a href="">
+                <router-link :to="`/${item.name}`">{{item.name}}</router-link>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="content">
-        我是内容
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      types: [{
+        name: 'type1',
+        detail: []
+      },{
+        name: 'type2',
+        detail: []
+      }]
+    }
+  }
+}
+</script>
+
 
 <style lang="scss" scoped>
 .app {
@@ -39,6 +68,7 @@
       bottom: 0;
       overflow-x: hidden;
       overflow-y: auto;
+      background-color: #eee;
       .sidebar-inner {
         width: 260px;
         padding: 40px 20px 60px 60px;
@@ -50,7 +80,6 @@
       max-width: 600px;
       margin: 0 auto;
       padding-left: 60px;
-      height: 1000px;
     }
   }
 }

@@ -3,9 +3,8 @@ import VueRouter from 'vue-router';
 import App from './App';
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import index from './components/index/index';
-import subpage from './components/subpage/subpage';
-import detail from './components/detail/detail';
+import type1 from './components/type1/type1';
+import type2 from './components/type2/type2';
 
 import 'common/common';
 
@@ -15,19 +14,15 @@ Vue.use(ElementUI);
 const routes = [
   {
     path: '/',
-    component: index
+    component: type1
   },
   {
-    path: '/index',
-    component: index
+    path: '/type1',
+    component: type1
   },
   {
-    path: '/subpage',
-    component: subpage
-  },
-  {
-    path: '/detail',
-    component: detail
+    path: '/type2',
+    component: type2
   }
 ];
 
@@ -40,8 +35,7 @@ const app = new Vue({
   router,
   components: {
     App,
-    index,
-    subpage,
-    detail
+    type1,
+    type2
   }
 }).$mount('#app');
