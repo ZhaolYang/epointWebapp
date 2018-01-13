@@ -2,17 +2,11 @@
   <div class="app">
     <div class="header">组件库</div>
     <div class="main">
-      <div class="sidebar">
-        <div class="sidebar-inner">
+      <div class="sidebar-ct">
+        <div class="sidebar">
           <!-- <router-link to="/type1">Go to type1</router-link>
           <router-link to="/type2">Go to type2</router-link> -->
-          <ul>
-            <li v-for="item in types">
-              <a href="">
-                <router-link :to="`/${item.name}`">{{item.name}}</router-link>
-              </a>
-            </li>
-          </ul>
+          <sidebar/>
         </div>
       </div>
       <div class="content">
@@ -25,17 +19,21 @@
 </template>
 
 <script>
+import store from './store/index';
+import sidebar from './components/sidebar/sidebar';
+
 export default {
+  store,
   data() {
     return {
-      types: [{
-        name: 'type1',
-        detail: []
-      },{
-        name: 'type2',
-        detail: []
-      }]
+      
     }
+  },
+  created() {
+    console.log(this.$store)
+  },
+  components: {
+    sidebar
   }
 }
 </script>
@@ -61,7 +59,7 @@ export default {
     z-index: 1;
     padding: 0 60px 30px;
     overflow-x: hidden;
-    .sidebar {
+    .sidebar-ct {
       position: fixed;
       top: 61px;
       left: 0;
@@ -69,7 +67,7 @@ export default {
       overflow-x: hidden;
       overflow-y: auto;
       background-color: #eee;
-      .sidebar-inner {
+      .sidebar {
         width: 260px;
         padding: 40px 20px 60px 60px;
       }
