@@ -1,11 +1,23 @@
 <template>
   <div class="type1">
-    <div class="box">组件1</div>
+    <div class="box">
+      <div v-marked>
+          <p>sdasdas</p>
+      </div>
+    </div>
     <div class="box">组件2</div>
     <div class="box">组件3</div>
     <div class="box">组件4</div>
   </div>
 </template>
+
+<script>
+export default {
+  created() {
+  }
+}
+</script>
+
 
 <style lang="scss" scoped>
   .type1 {
