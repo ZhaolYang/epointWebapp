@@ -3,15 +3,16 @@ import VueRouter from 'vue-router';
 import App from './App';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import Marked from 'common/lib/marked';
+import marked from 'common/lib/marked';
 import type1 from './components/type1/type1';
 import type2 from './components/type2/type2';
 
 import 'common/common';
 
+
 Vue.use(VueRouter);
 Vue.use(ElementUI);
-Vue.use(Marked);
+Vue.use(marked);
 
 const routes = [
   {
