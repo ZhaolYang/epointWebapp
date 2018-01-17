@@ -1,5 +1,5 @@
 import marked from 'marked';
-import 'highlight.js/styles/monokai-sublime.css'
+import 'highlight.js/styles/mono-blue.css'
 
 
 marked.setOptions({
@@ -23,7 +23,6 @@ let install = function(Vue){
 	Vue.directive('marked',function(el,binding,vnode){
         let html = el.innerHTML;
         if(el.classList.contains('css')||el.classList.contains('javascript')){
-            html.replace(/&lt;/,'<');
             html = html.replace(/&lt;/,'<').replace(/&gt;/,'>');
         }
 		el.innerHTML = marked(html);

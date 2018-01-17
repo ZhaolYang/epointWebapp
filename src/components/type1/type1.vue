@@ -1,34 +1,41 @@
 <template>
   <div class="type1">
     <div class="box">
-      <el-tabs v-model="activeName2" type="card" @tab-click="handleClick">
-        <el-tab-pane label="HTML" name="first">
-          <div v-marked class="html">
+      <div class="img-ct">我是效果图</div>
+      <div class="see-code">
+        <div class="btn-ct">
+          <el-button type="primary" round @click="toggle('component1')">code</el-button>
+        </div>
+        <el-tabs v-if="component1.showcode" v-model="component1.activeName" type="border-card" @tab-click="handleClick">
+          <el-tab-pane label="HTML" name="first">
+            <div v-marked class="html">
 ``` HTML
 <p>1111</p>
 ```
-          </div>
-        </el-tab-pane>
-        <el-tab-pane label="CSS" name="second">
-          <div v-marked class="css">
+            </div>
+          </el-tab-pane>
+          <el-tab-pane label="CSS" name="second">
+            <div v-marked class="css">
 ``` css
 p > a {
   color: #fff;
 }
 ```
-          </div>
-        </el-tab-pane>
-        <el-tab-pane label="Javascript" name="third">
-          <div v-marked class="javascript">
+            </div>
+          </el-tab-pane>
+          <el-tab-pane label="Javascript" name="third">
+            <div v-marked class="javascript">
 ``` javascript
 for(var i=0;i<10;i++){
   console.log(i);
   console.log("111");
 }
 ```
-          </div>
-        </el-tab-pane>
-      </el-tabs>
+            </div>
+          </el-tab-pane>
+        </el-tabs>
+      </div>
+      
       
     </div>
     <div class="box">组件2</div>
@@ -39,33 +46,50 @@ for(var i=0;i<10;i++){
 
 <script>
 export default {
-  data(){
+  data() {
     return {
-      activeName2: 'first'
+      component1: {
+        activeName: "first",
+        showcode: false
+      }
     };
   },
-  created() {
-  },
+  created() {},
   methods: {
     handleClick(tab, event) {
-        // console.log(tab, event);
-      }
+      // console.log(tab, event);
+    },
+    toggle(obj) {
+      this[obj].showcode = !this[obj].showcode;
+    }
   },
-  mounted() {
-  }
-}
+  mounted() {}
+};
 </script>
 
 
 <style lang="scss">
-  .type1 {
-    .box {
-      margin: 40px auto;
-      width: 400px;
-      height: 400px;
-      box-sizing: border-box;
-      border: 1px solid #eee;
+.type1 {
+  .box {
+    .img-ct {
+      min-height: 300px;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
     }
+    .see-code {
+      .btn-ct {
+        padding: 8px 0;
+        text-align: center;
+        box-shadow: 0 -1px 0 0px rgba(0,0,0,.2);
+      }
+    }
+    margin: 40px auto;
+    width: 600px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
   }
+}
 </style>
 

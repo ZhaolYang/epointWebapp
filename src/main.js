@@ -14,8 +14,7 @@ Vue.use(VueRouter);
 Vue.use(ElementUI);
 Vue.use(marked);
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     component: type1
   },
@@ -28,7 +27,6 @@ const routes = [
     component: type2
   }
 ];
-
 const router = new VueRouter({
   routes,
   linkActiveClass: 'active'
