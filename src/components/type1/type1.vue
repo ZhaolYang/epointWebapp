@@ -66,30 +66,3 @@ export default {
   mounted() {}
 };
 </script>
-
-
-<style lang="scss">
-.type1 {
-  .box {
-    .img-ct {
-      min-height: 300px;
-      img {
-        display: block;
-        margin: 0 auto;
-      }
-    }
-    .see-code {
-      .btn-ct {
-        padding: 8px 0;
-        text-align: center;
-        box-shadow: 0 -1px 0 0px rgba(0,0,0,.2);
-      }
-    }
-    margin: 40px auto;
-    width: 600px;
-    box-sizing: border-box;
-    border: 1px solid #eee;
-  }
-}
-</style>
-

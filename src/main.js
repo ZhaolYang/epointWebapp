@@ -6,6 +6,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import marked from 'common/lib/marked';
 import type1 from './components/type1/type1';
 import type2 from './components/type2/type2';
+import echarts from './components/echarts/echarts';
 
 import 'common/common';
 
@@ -25,6 +26,10 @@ const routes = [{
   {
     path: '/type2',
     component: type2
+  },
+  {
+    path: '/echarts',
+    component: echarts
   }
 ];
 const router = new VueRouter({
@@ -37,6 +42,7 @@ const app = new Vue({
   components: {
     App,
     type1,
-    type2
+    type2,
+    echarts
   }
 }).$mount('#app');
