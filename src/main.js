@@ -16,7 +16,7 @@ Vue.use(marked);
 
 const routes = [{
     path: '/',
-    component: type1
+    component: echarts
   },
   {
     path: '/type1',

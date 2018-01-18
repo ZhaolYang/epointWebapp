@@ -6,10 +6,6 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     types: [{
-      name: 'type1'
-    },{
-      name: 'type2'
-    },{
       name: 'echarts',
       detail: [{
         name:'chart1'
@@ -20,6 +16,10 @@ export default new Vuex.Store({
       },{
         name:'chart4'
       }]
+    },{
+      name: 'type1'
+    },{
+      name: 'type2'
     }]
   },
   mutations: {}
