@@ -10,7 +10,6 @@ import echarts from './components/echarts/echarts';
 
 import 'common/common';
 
-
 Vue.use(VueRouter);
 Vue.use(ElementUI);
 Vue.use(marked);

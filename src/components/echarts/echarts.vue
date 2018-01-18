@@ -13,15 +13,15 @@
           <el-tab-pane label="HTML" name="first">
             <div v-marked class="html">
 ``` HTML
-<p>1111</p>
+<div id="chart1" ref="chart1"></div><br/>
 ```
             </div>
           </el-tab-pane>
           <el-tab-pane label="CSS" name="second">
             <div v-marked class="css">
 ``` css
-p > a {
-  color: #fff;
+#chart1 {
+  height: 300px;
 }
 ```
             </div>
@@ -29,10 +29,50 @@ p > a {
           <el-tab-pane label="Javascript" name="third">
             <div v-marked class="javascript">
 ``` javascript
-for(var i=0;i<10;i++){
-  console.log(i);
-  console.log("111");
-}
+options = {
+        tooltip: {
+          trigger: "item",
+          formatter: "{a} <br>{b}: {c} ({d}%)"
+        },
+        legend: {
+          orient: "vertical",
+          x: "left",
+          data: ["直接访问", "邮件营销", "联盟广告", "视频广告", "搜索引擎"]
+        },
+        series: [
+          {
+            name: "访问来源",
+            type: "pie",
+            radius: ["50%", "70%"],
+            avoidLabelOverlap: false,
+            label: {
+              normal: {
+                show: false,
+                position: "center"
+              },
+              emphasis: {
+                show: true,
+                textStyle: {
+                  fontSize: "30",
+                  fontWeight: "bold"
+                }
+              }
+            },
+            labelLine: {
+              normal: {
+                show: false
+              }
+            },
+            data: [
+              { value: 335, name: "直接访问" },
+              { value: 310, name: "邮件营销" },
+              { value: 234, name: "联盟广告" },
+              { value: 135, name: "视频广告" },
+              { value: 1548, name: "搜索引擎" }
+            ]
+          }
+        ]
+      }
 ```
             </div>
           </el-tab-pane>
@@ -49,6 +89,7 @@ for(var i=0;i<10;i++){
 
 <script>
 import echarts from "echarts/lib/echarts";
+require('echarts/lib/chart/pie');
 export default {
   data() {
     return {

@@ -9,8 +9,8 @@
         <el-tabs v-if="component1.showcode" v-model="component1.activeName" type="border-card" @tab-click="handleClick">
           <el-tab-pane label="HTML" name="first">
             <div v-marked class="html">
-``` HTML
-<p>1111</p>
+``` html
+<p>111111</p><br/>
 ```
             </div>
           </el-tab-pane>
