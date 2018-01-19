@@ -205,9 +205,12 @@ a {
         line-height: 30px;
         font-size: 20px;
         text-align: center;
+        box-shadow: 0 1px 0 0px rgba(0, 0, 0, 0.1);
     }
     .img-ct {
-      min-height: 300px;
+      box-sizing: border-box;
+      margin: 10px auto;
+      min-height: 250px;
       img {
         display: block;
         margin: 0 auto;
@@ -220,7 +223,7 @@ a {
       .btn-ct {
         padding: 8px 0;
         text-align: center;
-        box-shadow: 0 -1px 0 0px rgba(0,0,0,.2);
+        box-shadow: 0 -1px 0 0px rgba(0,0,0,.1);
       }
     }
     margin: 40px auto;

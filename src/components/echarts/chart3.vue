@@ -229,7 +229,9 @@ export default {
 </script>
 
 <style lang="scss">
-#chart {
-  height: 300px;
+#chart3 {
+  #chart {
+    height: 300px;
+  }
 }
 </style>

@@ -20,6 +20,8 @@ export default new Vuex.Store({
       name: 'range',
       detail: [{
         name: 'range1'
+      },{
+        name: 'range2'
       }]
     },{
       name: 'type1'

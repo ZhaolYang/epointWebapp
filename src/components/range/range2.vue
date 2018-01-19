@@ -1,43 +1,43 @@
 <template>
-  <!-- 排名1 -->
-    <div class="box" id="range1">
-      <h2 class="component-title">排名1</h2>
+  <!-- 排名2 -->
+    <div class="box" id="range2">
+      <h2 class="component-title">排名2</h2>
       <div class="img-ct">
           <ul class="range-list">
               <li>
                   <label>公安局</label>
                   <div class="percent">
                       <div></div>
+                      <span>2981</span>
                   </div>
-                  <span>2981</span>
               </li>
               <li>
                   <label>公安局</label>
                   <div class="percent">
                       <div></div>
+                      <span>2981</span>
                   </div>
-                  <span>2981</span>
               </li>
               <li>
                   <label>公安局</label>
                   <div class="percent">
                       <div></div>
+                      <span>2981</span>
                   </div>
-                  <span>2981</span>
               </li>
               <li>
                   <label>公安局</label>
                   <div class="percent">
                       <div></div>
+                      <span>2981</span>
                   </div>
-                  <span>2981</span>
               </li>
               <li>
                   <label>公安局</label>
                   <div class="percent">
                       <div></div>
+                      <span>2981</span>
                   </div>
-                  <span>2981</span>
               </li>
           </ul>
       </div>
@@ -54,36 +54,36 @@
         <label>公安局</label>
         <div class="percent">
             <div></div>
+            <span>2981</span>
         </div>
-        <span>2981</span>
     </li>
     <li>
         <label>公安局</label>
         <div class="percent">
             <div></div>
+            <span>2981</span>
         </div>
-        <span>2981</span>
     </li>
     <li>
         <label>公安局</label>
         <div class="percent">
             <div></div>
+            <span>2981</span>
         </div>
-        <span>2981</span>
     </li>
     <li>
         <label>公安局</label>
         <div class="percent">
             <div></div>
+            <span>2981</span>
         </div>
-        <span>2981</span>
     </li>
     <li>
         <label>公安局</label>
         <div class="percent">
             <div></div>
+            <span>2981</span>
         </div>
-        <span>2981</span>
     </li>
 </ul>
 ```
@@ -98,11 +98,11 @@
     background-color: #eee;
 }
 
-.range-list > li {
+.range-list>li {
     height: 37px;
 }
 
-.range-list > li > label {
+.range-list>li>label {
     float: left;
     width: 70px;
     line-height: 37px;
@@ -110,29 +110,33 @@
     color: #bcbcbc;
 }
 
-.range-list > li > .percent {
+.range-list>li>.percent {
     float: left;
     margin-top: 8.5px;
-    width: 360px;
+    width: 445px;
     height: 20px;
     border-radius: 2px 10px 10px 2px;
     background-color: #1b3464;
 }
 
-.range-list > li > .percent > div {
-    width: 50%;
+.range-list>li>.percent>div {
+    float: left;
+    box-sizing: border-box;
+    padding-left: 60px;
+    width: 80%;
     height: 100%;
     border-radius: 2px 10px 10px 2px;
     background-color: #f86464;
     transition: all .8s;
 }
 
-.range-list > li > span {
+.percent>span {
     float: left;
-    width: 84px;
-    line-height: 37px;
-    font-size: 21px;
-    color: #bcbcbc;
+    margin-left: -60px;
+    width: 60px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #fff;
     text-align: center;
 }
 ```
@@ -171,7 +175,7 @@ export default {
 </script>
 
 <style lang="scss">
-#range1 {
+#range2 {
   .range-list {
     margin: 10px auto;
     width: 515px;
@@ -193,26 +197,30 @@ export default {
   .range-list > li > .percent {
     float: left;
     margin-top: 8.5px;
-    width: 360px;
+    width: 445px;
     height: 20px;
     border-radius: 2px 10px 10px 2px;
     background-color: #1b3464;
   }
 
   .range-list > li > .percent > div {
-    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 60px;
+    width: 80%;
     height: 100%;
     border-radius: 2px 10px 10px 2px;
     background-color: #f86464;
     transition: all 0.8s;
   }
 
-  .range-list > li > span {
+  .percent > span {
     float: left;
-    width: 84px;
-    line-height: 37px;
-    font-size: 21px;
-    color: #bcbcbc;
+    margin-left: -60px;
+    width: 60px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #fff;
     text-align: center;
   }
 }

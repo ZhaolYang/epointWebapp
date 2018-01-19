@@ -52,8 +52,8 @@ option = {
 
 <script>
 import echarts from "echarts/lib/echarts";
-require('echarts/lib/chart/bar');
-require('echarts/lib/component/legend');
+require("echarts/lib/chart/bar");
+require("echarts/lib/component/legend");
 export default {
   data() {
     return {
@@ -68,18 +68,20 @@ export default {
     initChart() {
       let chart = echarts.init(this.$refs.chart);
       chart.setOption({
-    xAxis: {
-        type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    },
-    yAxis: {
-        type: 'value'
-    },
-    series: [{
-        data: [120, 200, 150, 80, 70, 110, 130],
-        type: 'bar'
-    }]
-});
+        xAxis: {
+          type: "category",
+          data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        },
+        yAxis: {
+          type: "value"
+        },
+        series: [
+          {
+            data: [120, 200, 150, 80, 70, 110, 130],
+            type: "bar"
+          }
+        ]
+      });
     }
   },
   mounted() {
@@ -89,7 +91,9 @@ export default {
 </script>
 
 <style lang="scss">
-#chart {
-  height: 300px;
+#chart2 {
+  #chart {
+    height: 300px;
+  }
 }
 </style>

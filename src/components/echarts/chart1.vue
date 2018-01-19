@@ -83,8 +83,8 @@ options = {
 
 <script>
 import echarts from "echarts/lib/echarts";
-require('echarts/lib/chart/pie');
-require('echarts/lib/component/legend');
+require("echarts/lib/chart/pie");
+require("echarts/lib/component/legend");
 export default {
   data() {
     return {
@@ -151,7 +151,9 @@ export default {
 </script>
 
 <style lang="scss">
-#chart {
-  height: 300px;
+#chart1 {
+  #chart {
+    height: 300px;
+  }
 }
 </style>
