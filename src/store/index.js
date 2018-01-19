@@ -17,6 +17,11 @@ export default new Vuex.Store({
         name:'chart4'
       }]
     },{
+      name: 'range',
+      detail: [{
+        name: 'range1'
+      }]
+    },{
       name: 'type1'
     },{
       name: 'type2'

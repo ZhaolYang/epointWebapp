@@ -13,14 +13,14 @@
           <el-tab-pane label="HTML" name="first">
             <div v-marked class="html">
 ``` HTML
-<div id="chart"></div><br/>
+<div id="chart"></div>
 ```
             </div>
           </el-tab-pane>
           <el-tab-pane label="CSS" name="second">
             <div v-marked class="css">
 ``` css
-#chart1 {
+#chart {
   height: 300px;
 }
 ```

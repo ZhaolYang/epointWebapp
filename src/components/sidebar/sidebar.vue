@@ -31,6 +31,7 @@ export default {
   methods: {
     change(i) {
       this.selected = i;
+      this.lv2selected = 0;
     },
     lv2change(i) {
       this.lv2selected = i;

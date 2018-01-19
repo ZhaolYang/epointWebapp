@@ -7,6 +7,7 @@ import marked from 'common/lib/marked';
 import type1 from './components/type1/type1';
 import type2 from './components/type2/type2';
 import echarts from './components/echarts/echarts';
+import range from './components/range/range';
 
 import 'common/common';
 
@@ -29,6 +30,10 @@ const routes = [{
   {
     path: '/echarts',
     component: echarts
+  },
+  {
+    path: '/range',
+    component: range
   }
 ];
 const router = new VueRouter({

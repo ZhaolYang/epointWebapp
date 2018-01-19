@@ -1,7 +1,6 @@
 <template>
   <div class="echarts">
     <chart1/>
-    <!-- 图表2 -->
     <chart2/>
     <chart3/>
     <chart4/>
@@ -16,10 +15,6 @@ import chart4 from './chart4';
 export default {
   data() {
     return {
-      component1: {
-        activeName: "first",
-        showcode: false
-      }
     };
   },
   created() {},

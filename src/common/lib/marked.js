@@ -10,18 +10,19 @@ let mdRenderer = new marked.Renderer();
 //   html.push('<pre>');
 //   html.push('<code class="'+ lang +'">'+code+'</code>');
 //   html.push('</pre>');
-//   let str = html.join().replace(/&lt;/,'<').replace(/&gt;/,'>');
-//   console.log(str)
-//   if (this.options.highlight) {
-//     var out = this.options.highlight(code);
-//     if (out != null && out !== code) {
-//       // escaped = true;
-//       code = out;
-//     }
-//   }
-//   return str;
+//   // html = code;
+//   // let str = html.join().replace(/&lt;/,'<').replace(/&gt;/,'>');
+//   // console.log(str)
+//   // if (this.options.highlight) {
+//   //   var out = this.options.highlight(code);
+//   //   if (out != null && out !== code) {
+//   //     // escaped = true;
+//   //     code = out;
+//   //   }
+//   // }
+//   // return encodeHtml(code);
 
-//   // return html.join('');
+//   return html.join('');
 // }
 
 // function encodeHtml(str) {
@@ -40,6 +41,7 @@ marked.setOptions({
   smartLists: true,
   smartypants: false,
   highlight: function (code) {
+    console.log(code)
     return require('highlight.js').highlightAuto(code).value;
   }
 });
@@ -51,7 +53,7 @@ let install = function (Vue) {
 
     let html = el.innerHTML;
     if (el.classList.contains('css') || el.classList.contains('javascript')) {
-      html = html.replace(/&lt;/, '<').replace(/&gt;/, '>');
+      html = html.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
     }
     el.innerHTML = marked(html);
   })
